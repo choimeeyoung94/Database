@@ -1,7 +1,7 @@
 /* sql　종류
 1. ddl (Data Definition Language)
     1) 데이터 정의어
-    2) 데이터베이스, 테이블, 사용자 등의
+    2) 데이터베이스 객체(데이터베이스, 테이블, 사용자 등)의 정보를 다루는 언어
 2. DML (Data Manipulation Language)
     1) 데이터 조작어
     2) 실제 데이터를 다루는 언어
