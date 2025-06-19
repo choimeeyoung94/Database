@@ -6,8 +6,6 @@
     쿼리문(SQL) 실행하는 방법
     1. 블록을 잡은 뒤, ctrl + Enter
     2. 전체 실행할 때는 Ctrl +Shift + Enter
-    
-
 */ 
 
 /*
