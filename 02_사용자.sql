@@ -32,14 +32,24 @@ CREATE USER 'user_test'@'%' IDENTIFIED BY 'P@ssw0rd';
 SELECT * FROM mysql.user; -- 사용자 정보가 등록된 mysql 데이터베이스의 user 
 
 # 3. user_test 사용자에게 권한 부여하기 (root같은 관리자 계정이 다른 사용자에게 권한을 줄 수 있다)
+# *.* => 모든 스키마의 모든 객체
 GRANT ALL PRIVILEGES ON db_test.* TO 'user_test'@'%'; # db_test 내부의 모든 것을 사용할 수 있는 권한이 생성된다.
 SHOW GRANTS FOR 'user_test'@'%';
 
 # 4. user_test 사용자 삭제하기
+# @: 어디어디에 있는 , %: 모든 호스트
 DROP USER 'user_test'@'%'; # DROP USER user_test
 
 # 5. db_test 데이터베이스 삭제하기
 DROP DATABASE IF EXISTS db_test;
+
+# 수업에서 사용할 사요앚 만들고, 권한 부여하기
+#       데이터베이스 객체의 종류가 들어간다
+CREATE USER IF NOT EXISTS '_goodee'@'%' IDENTIFIED BY 'goodee';
+
+#                        모든 데이터베이스 안에 모든 테이블                    
+GRANT ALL PRIVILEGES ON *.* TO '_goodee'@'%';
+
 
 
 
