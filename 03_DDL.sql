@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS tbl_product(
    created_at         DATETIME           DEFAULT NOW() # 기본값 시스템이 자동으로 시간을 등록해준다
 ) ENGINE=InnoDB; 
 
+
 # 스토리지 엔진
 # InnoDB: 트랜잭션 지원(동시성 지원), 외래키 지원(무결성 지원), 은행 또는 쇼핑몰등 일반적인 사이트에서 사용
 # MyISAM: 데이터를 저장하고 읽어들이기만 할때 쓴다. 풀텍스트 인덱스 지원(검색을 빠르게 하기 위해서 사용, 읽기 위주 작업에 특화). 일반적인 웹 개발에서는 InnoDB를 쓴다. 
@@ -25,3 +26,6 @@ ALTER TABLE tbl_product AUTO_INCREMENT = 1000;
 
 # 테이블 삭제하기 (취소 불가능)
 DROP TABLE IF EXISTS tbl_product;
+
+# 데이터베이스 삭제
+DROP DATABASE IF EXISTS db_ddl;
