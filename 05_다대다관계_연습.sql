@@ -3,6 +3,11 @@
 # 여러 번의 구매에는 각각 여러 제품이 포함될 수 있습니다 (주문 - 주문상세 - 제품)
 # 고객명, 고객연락처, 제품명, 제품가격, 재고, 구매일, 구매한제품객수 정보를 저장하세요
 
+CREATE DATABASE IF NOT EXISTS db_model;
+
+# db_model 데이터베이스 사용
+USE db_model;
+
 # 고객 테이블
 CREATE TABLE IF NOT EXISTS tbl_customer(
   customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
